@@ -1,5 +1,5 @@
 import cv2
-cap = cv2.VideoCapture('assets/bg.mp4')
+cap = cv2.VideoCapture('#imgpath')
 while True:
     success,frame = cap.read()
     if not success:
@@ -8,4 +8,5 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 cap.release()
+
 cv2.destroyAllWindows()
